@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CUSTOMIZE: Browser tab title -->
-    <title>Naledi, Will You Be My Valentine baby? 💝</title>
+    <title>Naledi, Will You Be My Valentine Baby? 💝</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Styles -->
@@ -13,12 +12,13 @@
 <body>
     <!-- Floating Background Elements -->
     <div class="floating-elements">
-        <!-- Hearts and bears will be added here by JavaScript -->
+        <!-- Hearts and bears added by JavaScript -->
     </div>
 
     <!-- Main Content Container -->
     <div class="container">
-        <h1 id="Naledi,Will you be my Valentine baby?"></h1>
+        <!-- Main Valentine Message -->
+        <h1 id="mainMessage">Naledi, Will You Be My Valentine Baby? 💖</h1>
         
         <!-- Music Player -->
         <div id="musicControls" class="music-controls">
@@ -30,42 +30,41 @@
         </div>
 
         <!-- First Question -->
-        <div class="question-section" id="Naledi,Will you be my Valentine baby?">
-            <h2 id="Naledi,Will you be my Valentine baby?"></h2>
-            <button class="cute-btn" onclick="moveButton(this)" id="yesBtn1"></button>
-            <button class="cute-btn" onclick="moveButton(this)" id="noBtn1"></button>
-            <!-- CUSTOMIZE: Secret answer text -->
-            <div class="YES!">
-                <button class="cute-btn special" onclick="showNextQuestion(2)" id="secretAnswerBtn"></button>
+        <div class="question-section" id="question1">
+            <h2 id="question1Text">Will you be my Valentine? 💘</h2>
+            <button class="cute-btn" onclick="moveButton(this)" id="yesBtn1">Yes</button>
+            <button class="cute-btn" onclick="moveButton(this)" id="noBtn1">No</button>
+            <div class="secret-answer">
+                <button class="cute-btn special" onclick="showNextQuestion(2)" id="secretAnswerBtn">💖 Secret Yes 💖</button>
             </div>
         </div>
 
         <!-- Second Question (Love Meter) -->
         <div class="question-section hidden" id="question2">
-            <h2 id="question2Text"></h2>
-            <!-- Love meter settings: min="0" max="10000" -->
+            <h2 id="question2Text">How much love do you feel for me? 💕</h2>
             <div class="love-meter">
                 <input type="range" min="0" max="10000" value="100" class="slider" id="loveMeter">
                 <p>
-                    <span class="love-value-container"><span id="startText"></span> (<span id="loveValue">100</span>%)</span>
+                    <span class="love-value-container">
+                        <span id="startText">Love Level</span> (<span id="loveValue">100</span>%)
+                    </span>
                     <span id="extraLove" class="hidden"></span>
                 </p>
             </div>
-            <button class="cute-btn" onclick="showNextQuestion(3)" id="nextBtn"></button>
+            <button class="cute-btn" onclick="showNextQuestion(3)" id="nextBtn">Next</button>
         </div>
 
         <!-- Final Question -->
         <div class="question-section hidden" id="question3">
-            <h2 id="question3Text"></h2>
-            <button class="cute-btn final-yes" onclick="celebrate()" id="yesBtn3"></button>
-            <button class="cute-btn" onclick="moveButton(this)" id="noBtn3"></button>
+            <h2 id="question3Text">Do you promise to make me smile every day? 😊</h2>
+            <button class="cute-btn final-yes" onclick="celebrate()" id="yesBtn3">Yes</button>
+            <button class="cute-btn" onclick="moveButton(this)" id="noBtn3">No</button>
         </div>
 
-        <!-- CUSTOMIZE: Celebration message -->
+        <!-- Celebration -->
         <div class="celebration hidden" id="celebration">
-            <h2 id="You made me the happiest woman alive!Thank you, See you on the 14th Of Feb!"></h2>
-            <p class="celebration-text" id="celebrationMessage"></p>
-            <p class="celebration-text" id="celebrationEmojis"></p>
+            <h2 id="celebrationMessageText">You made me the happiest woman alive! Thank you, see you on the 14th of Feb! 🎉💝</h2>
+            <p class="celebration-text" id="celebrationEmojis">💖💘🌹</p>
         </div>
     </div>
 
@@ -74,4 +73,4 @@
     <script src="theme.js"></script>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
